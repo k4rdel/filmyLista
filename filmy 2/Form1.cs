@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
 
 namespace filmy_2
@@ -16,9 +17,19 @@ namespace filmy_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] items = { textBox1.Text, textBox2.Text, dateTimePicker1.Text, textBox4.Text };
-            ListViewItem item = new ListViewItem(items);
-            listView1.Items.Add(item);
+            if(textBox1.Text == "" ||  textBox2.Text == "" || textBox4.Text == "")
+            {
+                MessageBox.Show("¯adne pole nie mo¿e byæ puste!", "Komunikat");
+            }
+            else
+            {
+                string[] items = { textBox1.Text, textBox2.Text, dateTimePicker1.Text, textBox4.Text };
+                ListViewItem item = new ListViewItem(items);
+                listView1.Items.Add(item);
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox4.Clear();
+            }
         }
 
         private void UsuwanieDanych()
@@ -84,6 +95,21 @@ namespace filmy_2
         private void Form1_Load(object sender, EventArgs e)
         {
             OdczytZPliku();
+        }
+
+        private void zmieñToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox4.Text == "")
+            {
+                MessageBox.Show("¯adne pole nie mo¿e byæ puste!", "Komunikat");
+            }
+            else
+            {
+                listView1.SelectedItems[0].SubItems[0].Text = textBox1.Text;
+                listView1.SelectedItems[0].SubItems[1].Text = textBox2.Text;
+                listView1.SelectedItems[0].SubItems[2].Text = dateTimePicker1.Text;
+                listView1.SelectedItems[0].SubItems[3].Text = textBox4.Text;
+            }
         }
     }
 }

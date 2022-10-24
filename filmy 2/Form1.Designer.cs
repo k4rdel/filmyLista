@@ -41,6 +41,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.usuńWybraneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zmieńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.headTytul = new System.Windows.Forms.ColumnHeader();
             this.headRezyser = new System.Windows.Forms.ColumnHeader();
@@ -140,9 +141,10 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuńWybraneToolStripMenuItem});
+            this.usuńWybraneToolStripMenuItem,
+            this.zmieńToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(150, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(150, 48);
             // 
             // usuńWybraneToolStripMenuItem
             // 
@@ -150,6 +152,13 @@
             this.usuńWybraneToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.usuńWybraneToolStripMenuItem.Text = "Usuń wybrane";
             this.usuńWybraneToolStripMenuItem.Click += new System.EventHandler(this.usuńWybraneToolStripMenuItem_Click);
+            // 
+            // zmieńToolStripMenuItem
+            // 
+            this.zmieńToolStripMenuItem.Name = "zmieńToolStripMenuItem";
+            this.zmieńToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.zmieńToolStripMenuItem.Text = "Zmień";
+            this.zmieńToolStripMenuItem.Click += new System.EventHandler(this.zmieńToolStripMenuItem_Click);
             // 
             // listView1
             // 
@@ -203,6 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.listView1);
@@ -245,5 +255,6 @@
         private ColumnHeader headData;
         private ColumnHeader headAktor;
         private DateTimePicker dateTimePicker1;
+        private ToolStripMenuItem zmieńToolStripMenuItem;
     }
 }
