@@ -5,7 +5,7 @@ namespace filmy_2
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1()  
         {
             InitializeComponent();
         }
@@ -110,6 +110,9 @@ namespace filmy_2
                 listView1.SelectedItems[0].SubItems[2].Text = dateTimePicker1.Text;
                 listView1.SelectedItems[0].SubItems[3].Text = textBox4.Text;
             }
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox4.Clear();
         }
     }
 }
